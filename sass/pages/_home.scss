@@ -1,0 +1,50 @@
+#home-page {
+	position: relative;
+	background-repeat: no-repeat;
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 1rem;
+	}
+	.banner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transform: translateX(7rem);
+		object-fit: cover;
+		display: none;
+	}
+	p {
+		flex-grow: 1;
+		margin-bottom: 1rem;
+	}
+	#tags {
+		height: 1.8rem;
+		span {
+			color: var(--link);
+			font-size: .95em;
+			float: left;
+			text-align: center;
+			line-height: 1.8rem;
+			margin-right: .4em;
+			&:nth-child(3) {
+				margin-left: .4em;
+			}
+			&.material-symbols-outlined {
+				font-size: 1.2em;
+			}
+		}
+	}
+	
+	button {
+		width: 100%;
+		margin: .2rem 0;
+		&.active {
+			color: #000;
+			background: var(--primary);
+			transform: scale(1);
+			border: solid 1px #000;
+		}
+	}
+}

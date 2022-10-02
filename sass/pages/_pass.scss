@@ -1,0 +1,104 @@
+#pass-page {
+	grid-template-rows: 1fr 7rem;
+	position: relative;
+	
+	#progress {
+		width: 100%;
+		display: flex;
+		float: left;
+		margin: .5rem 0;
+		font-family: "Roboto", sans-serif;
+		text-align: center;
+		position: relative;
+	
+		h5 {
+			width: 2.2em;
+			height: 2em;
+			line-height: 2em;
+			border: solid #eee 2px;
+			border-radius: 100%;
+		}
+		h6 {
+			flex-grow: 1;
+			margin-left: .7em;
+			transform: translateX(-1rem) translateY(0.07rem);
+			height: 1.8em;
+			line-height: 1.8em;
+			border: solid #eee 2px;
+			border-left: none;
+			border-radius: 0 1em 1em 0;
+			font-size: .8em;
+		}
+	}
+	p { float: left }
+	#preview {
+		position: absolute;
+		height: 85%;
+		top: -1rem;
+		right: 2rem;
+	}
+	#rewards {
+		background-image: url('../images/ui_pass_road.png');
+		background-size: 3.5rem;
+		position: absolute;
+		background-repeat-y: no-repeat;
+		background-position: 0 1.3rem;
+		grid-row: 2;
+		grid-column: 1/3;
+		z-index: 1;
+		height: 100%;
+		display: flex;
+		width: 100%;
+	
+		> div {
+			padding: 0 1.4rem;
+			align-self: flex-end;
+			margin-bottom: 1.4rem;
+		}
+	}
+	.rewardo {
+		display: none;
+	
+		&:not(:checked) + .reward .icon {
+			opacity: .5;
+		}
+		&:checked + .reward {
+			transform: scale(0.95);
+		}
+		&:checked + .reward .icon {
+			opacity: .6;
+		}
+	}
+	.reward {
+		background-image: url('../images/ui_pass_level.png');
+		display: inline-block;
+		width: 5rem;
+		height: 5rem;
+		margin: 0 .6rem;
+		position: relative;
+		transition: .15s;
+	
+		.back {
+			height: 5rem;
+			position: absolute;
+		}
+		.icon {
+			margin: .5rem;
+			height: 4rem;
+			position: absolute;
+			transition: .15s;
+		}
+		h6 {
+			right: 0;
+			position: absolute;
+			text-align: center;
+			line-height: 2em;
+			height: 2em;
+			width: 2em;
+			background: rgba(0, 0, 0, .5);
+			float: right;
+			border: solid 2px #fff;
+			border-radius: 100%;
+		}
+	}
+}

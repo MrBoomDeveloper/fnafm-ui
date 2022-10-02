@@ -1,0 +1,15 @@
+#missions-page {
+	overflow-y: scroll;
+	padding: 2rem;
+
+	.mission > div {
+		display: flex;
+		padding: 0 !important;
+		
+		.type { height: 5rem }
+		.about {
+			flex-grow: 1;
+			padding: 1rem;
+		}
+	}
+}

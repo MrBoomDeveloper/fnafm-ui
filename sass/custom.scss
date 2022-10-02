@@ -1,0 +1,11 @@
+@import "default";
+
+@import "pages/home", 
+"pages/character", 
+"pages/pass", 
+"pages/shop", 
+"pages/missions", 
+"pages/logs", 
+"pages/about";
+
+@import "popup", "gameover";

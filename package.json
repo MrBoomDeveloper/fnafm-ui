@@ -1,0 +1,13 @@
+{
+  "name": "fnafm",
+  "version": "1.0.0",
+  "description": "A web interface for the native client",
+  "main": "index.js",
+  "scripts": {
+     "main": "sass --watch sass:css --style compressed"
+  },
+  "author": "MrBoomDev",
+  "license": "ISC",
+  "devDependencies": {
+  }
+}

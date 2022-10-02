@@ -1,0 +1,11 @@
+#about-page {
+	overflow: auto;
+	grid-template-columns: repeat(2,  1fr);
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+	}
+	h1 { margin-bottom: .5em }
+}

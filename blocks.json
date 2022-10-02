@@ -1,0 +1,50 @@
+{
+	0: {
+		texture: "floor.jpg",
+		barrier: false
+	},
+	1: {
+		texture: "wall_pizza.jpg",
+		barrier: true
+	},
+	2: {
+		texture: "wall.jpg",
+		barrier: true
+	},
+	3: {
+		barrier: false
+	},
+	4: {
+		barrier: true
+	},
+	5: {
+		animated: "$isAnimationEnabled",
+		animationSpeed: 100,
+		texture: [
+			"tv0.png",
+			"tv1.png",
+			"tv2.png"
+		],
+		barrier: true
+	},
+	6: {
+		animated: true,
+		dynamic: true,
+		defaultState: false,
+		action: "switchState",
+		actionSfx: "door.mp3",
+		actionTimeout: 750,
+		animationSpeed: 150,
+		texture: {
+			active: "door0.png",
+			inactive: "door1.png",
+			transition: [
+				"door2.png",
+				"door3.png",
+				"door4.png",
+				"door5.png"
+			]
+		},
+		barrier: "$isActive"
+	}
+}

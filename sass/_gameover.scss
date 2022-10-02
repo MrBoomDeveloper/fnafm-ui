@@ -1,0 +1,81 @@
+#gameover-page {
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+	.header {
+		display: none;
+		transition: 1s;
+		
+		p { opacity: 0 }
+		
+		&.active {
+			display: inline-block;
+			animation: popup .8s;
+		}
+	}
+	
+	h1 { font-size: 3em }
+	
+	ul {
+		max-height: 0;
+		overflow: hidden;
+		transition: 1.2s, opacity 1s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		opacity: 0;
+		
+		&.active {
+			opacity: 1;
+			max-height: 999px;
+			flex-grow: 1;
+		}
+		
+		li {
+			display: flex;
+			width: 10rem;
+			span:first-child {
+				flex-grow: 1;
+			}
+		}
+		hr {
+			width: 100%;
+			transform: scale(1.2, .2);
+			opacity: .1;
+		}
+	}
+	
+	#actions {
+		opacity: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: .5rem;
+		transition: .4s;
+		
+		&.active {
+			opacity: 1;
+		}
+	}
+}
+
+@keyframes popup {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	30% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	40% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" href="css/boom.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+	<script src="scripts/boom.js"></script>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/db.js"></script>
+</head>
+<body onload="gameover.animate(0)">
+	<main>
+		<section id="gameover-page">
+			<div class="header">
+				<h1>You Win!</h1>
+				<p>
+					Game ended in 12 AM
+				</p>
+			</div>
+
+			<ul>
+				<li><span>Stat title</span><span>0</span></li>
+				<li><span>Stat title</span><span>0</span></li>
+				<li><span>Stat title</span><span>0</span></li>
+				<li><span>Stat title</span><span>0</span></li>
+			</ul>
+
+			<div id="actions">
+				<button neon onclick="android.share(JSON.stringify(results))">Share results</button>
+				<button neon onclick="android.continue()">Continue</button>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

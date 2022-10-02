@@ -1,0 +1,19 @@
+#logs-page {
+	flex-direction: column;
+	padding: 1.5rem 2rem;
+	overflow: auto;
+
+	h2 {
+		margin-bottom: .4em;
+		&:not(:first-child) {
+			margin-top: .8em;
+		}
+	}
+	li {
+		line-height: 1.8;
+		&::before {
+			content: "- ";
+			margin-right: .1rem;
+		}
+	}
+}

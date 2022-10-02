@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<link rel="stylesheet" href="boom/style.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+		<link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<script src="boom/script.js"></script>
+		<script src="scripts/main.js"></script>
+		<script src="scripts/db.js"></script>
+		<script src="general.js"></script>
+	</head>
+	<body onload="main.load()">
+		<span id="preloader" class="material-symbols-outlined">home</span>
+		<div id="app">
+			<header>
+				<div class="profile reveal" onclick="main.popup('profile')">
+					<img class="pfp" src="images/ic_avatar_mrboom.jpg"/>
+					<p class="nick">MrBoomDev</p>
+					<div class="level">1 Lvl</div>
+					<span class="progress"></span>
+				</div>
+				<ul class="reveal">
+					<li><img src="images/ic_diamond.png"/><span>0</span></li>
+					<li><img src="images/ic_coin.png"/><span>0</span></li>
+					<span class="material-symbols-outlined" onclick="main.popup('settings')">settings</span>
+				</ul>
+			</header>
+			<aside class="reveal"></aside>
+			<main>
+				<div id="pager" class="reveal">
+					
+					<section id="home-page">
+						<img class="banner"/>
+						<div class="info">
+							<h1></h1>
+							<div id="tags">
+								<span class="material-symbols-outlined">groups</span><span id="players"></span>
+								<span class="material-symbols-outlined">schedule</span><span id="time"></span>
+							</div>
+							<p></p>
+							<div class="actions">
+								<button neon onclick="main.popup('modes')">Gamemodes</button>
+								<button neon onclick="if(!matchmaking) play(this)">Start Game</button>
+							</div>
+						</div>
+					</section>
+				
+					<section id="character-page">
+						<div class="info">
+							<h1></h1>
+							<div id="cats"></div>
+							<div id="inventory"></div>
+						</div>
+						<div id="preview">
+							<img src="images/placeholder_freddy.png"/>
+						</div>
+					</section>
+				
+					<section id="pass-page" >
+						<img id="preview" src="images/ui_pass_trump_freddy.png"/>
+						<div class="info">
+							<h1>Business Freddy</h1>
+							<div id="progress"><h5>1</h5><h6>0/100</h6></div>
+							<p id="description">A good skin to show how rich you are. So he also glows!</p>
+						</div>
+						<div id="rewards"><div class="HScroll"></div></div>
+					</section>
+				
+					<section id="shop-page" class="HScroll"></section>
+					
+					<section id="missions-page">
+						<card-small clickable class="mission"><div>
+							<img class="type" src="images/ui_mission_chica.jpg"/>
+							<div class="about">
+								<h4>Kill 5 enemies during a single match</h4>
+								<p>0/5</p>
+							</div>
+						</div></card-small>
+					</section>
+				
+					<section id="logs-page"></section>
+					<section id="about-page"></section>
+				</div>
+			</main>
+		</div>
+		
+		<div id="popup" class="reveal">
+			<header><a id="back" onclick="main.closePopup()"></a></header>
+			<main>
+				
+				<section id="profile-page">
+					<div class="about">
+						<img id="avatar" src="images/ic_avatar_mrboom.jpg"/>
+						<div id="text">
+							<h1>MrBoomDev</h1>
+							<p>he18jwjd103jsndnd8ks91j0</p>
+						</div>
+						<div id="actions">
+							<button neon onclick="android.logout()">Log Out</button>
+							<button neon onclick="main.dialog.create('profile')">Edit Details</button>
+						</div>
+					</div>
+					<div id="stats"></div>
+				</section>
+				
+				<section id="settings-page"></section>
+				<section id="modes-page"></section>
+			</main>
+		</div>
+	</body>
+</html>
